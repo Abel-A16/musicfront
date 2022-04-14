@@ -1,0 +1,236 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: #28353c;
+}
+::selection{
+  color: #fff;
+  background: #4285f4;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header{
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-5%);
+  margin-top: 40px;
+}
+.title{
+  padding-left: 20px;
+  color: #fff;
+  opacity: .7;
+}
+.opt2{
+  transform: translateX(-7%);
+  font-size: 1.5em;
+  width: 100%;
+  color: #fff;
+  font-weight: 300;
+  place-items: start;
+  opacity: .9;
+}
+
+#up{
+  margin-right: 10px;
+}
+ .btn{
+  position: relative;
+  width: 200px;
+  height: 40px;
+  margin: 20px 30%;
+}
+#btn{
+  margin-left: 50%;
+}
+ .btn a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  color: #fff;
+  z-index: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow:hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
+
+}
+
+ .btn:hover a{
+  letter-spacing: 2px;
+
+}
+
+ .btn a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255,255,255,0.15),transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: 0.5s;
+}
+ .btn:hover a::before{
+  transform: skewX(45deg) translateX(200%);
+
+}
+
+ .btn:hover::before{
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+
+.container .btn:hover::after{
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+
+#icon{
+  margin-left: 10px;
+  color: #fff;
+  opacity: .7;
+  font-size: 50px;
+}
+.wrapper{
+  width: 100%;
+  margin: 5px 0;
+  transform: translateX(-10%);
+}
+.select-btn, li{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.select-btn{
+  height: 65px;
+  padding: 0 20px;
+  font-size: 22px;
+  background: grey;
+  border-radius: 15px;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.select-btn i{
+  font-size: 31px;
+  transition: transform 0.3s linear;
+}
+.wrapper.active .select-btn i{
+  transform: rotate(-180deg);
+}
+.content{
+  display: none;
+  padding: 20px;
+  margin-top: 5px;
+  background: rgb(168, 164, 164);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.wrapper.active .content{
+  display: block;
+}
+.content .search{
+  position: relative;
+}
+.search i{
+  top: 50%;
+  left: 15px;
+  color: #000;
+  font-size: 20px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.search input{
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 0 20px 0 43px;
+  border: 1px solid #B3B3B3;
+  opacity:.5;
+}
+.search input:focus{
+  padding-left: 42px;
+  border: 2px solid #4285f4;
+}
+.search input::placeholder{
+  color: #000;
+}
+.content .options{
+  margin-top: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 7px;
+}
+.options::-webkit-scrollbar{
+  width: 7px;
+}
+.options::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb:hover{
+  background: #b3b3b3;
+}
+.options li{
+  height: 50px;
+  padding: 0 13px;
+  font-size: 21px;
+}
+.options li:hover, li.selected{
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+ .wrapper-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   width: 60%;
+ }
+ .how-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   color:#fff;
+   padding: 15px;
+ }
+ .howto{
+   margin-bottom: 20px;
+ }
