@@ -50,7 +50,7 @@ body{
   position: relative;
   width: 200px;
   height: 40px;
-  margin: 20px 30%;
+  margin: 40px 30%;
 }
 #btn{
   margin-left: 50%;
@@ -78,6 +78,30 @@ body{
   transition: 0.5s;
   backdrop-filter: blur(15px);
 
+}
+
+.upload{
+ font-size: 15px;
+ background: white;
+ border-radius: 30px;
+ box-shadow: 5px 5px 20px black;
+ outline: none;
+ width:300px;
+ transform:translateX(-25%);
+}
+
+::-webkit-file-upload-button{
+	color: white;
+	background: #206a5d;
+	padding: 15px;
+	border: none;
+	border-radius: 30px;
+	box-shadow: 1px 0 1px #6b4559;
+	outline: none;
+}
+
+::-webkit-file-upload-button:hover{
+	background: #48a5ed;
 }
 
  .btn:hover a{
